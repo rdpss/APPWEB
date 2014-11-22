@@ -18,6 +18,26 @@ Before you begin we recommend you read about the basic building blocks that asse
 Make sure you have installed all these prerequisites on your development machine.
 * Node.js - [Download & Install Node.js](http://www.nodejs.org/download/) and the npm package manager, if you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
 * MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads), and make sure it's running on the default port (27017).
+
+```
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+```
+* MongoDB - To start and stop MongoDB
+```
+sudo service mongod start
+sudo service mongod stop
+sudo service mongod restart
+```
+* Verify that the mongod process has started
+successfully by checking the contents of the log file at
+
+```
+cat /var/log/mongodb/mongod.log
+```
+
 * Bower - You're going to use the [Bower Package Manager](http://bower.io/) to manage your front-end packages, in order to install it make sure you've installed Node.js and npm, then install bower globally using npm:
 
 ```
