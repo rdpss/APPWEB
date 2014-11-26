@@ -1,0 +1,6 @@
+{
+    "templates" : {
+        "views/common/header.view" : "templates/common/header.html",
+        "views/home/main.view" : "templates/home/main.html"
+    }
+}
